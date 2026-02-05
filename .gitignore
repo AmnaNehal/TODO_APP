@@ -1,0 +1,19 @@
+ Node
+node_modules/
+backend/node_modules/
+
+npm-debug.log*
+yarn-error.log*
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+.env.local
+
+# OS / Editor
+.vscode/
+.DS_Store
