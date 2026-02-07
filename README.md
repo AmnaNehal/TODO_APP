@@ -31,4 +31,31 @@ docker-compose up --build
 ```
 
 Frontend will be available at http://localhost:3000
-Backend API will be available at http://localhost:8000
+Backend API will be available at http://127.0.0.1:8000
+
+# Phase IV: Local Kubernetes Deployment (Minikube + Helm)
+
+## Objective
+Deploy the Phase III Cloud Native Todo Chatbot (Frontend + Backend + PostgreSQL) on a local Kubernetes cluster using Minikube and Helm.
+
+## What is running
+- Frontend: Next.js (Service: `todo-frontend`, Port: `3000`)
+- Backend: FastAPI (Service: `todo-backend`, Port: `8002`)
+- Database: PostgreSQL (Service: `todo-db`, Port: `5432`)
+
+## Helm Chart
+A Helm chart was created and used to manage the deployment.
+
+Folder:
+- `helm/todo-chatbot`
+
+Helm release:
+- Release name: `todo`
+- Namespace: `default`
+
+Commands used:
+```bash
+cd helm
+helm lint todo-chatbot
+helm upgrade --install todo todo-chatbot
+helm list

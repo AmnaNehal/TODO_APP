@@ -11,7 +11,9 @@ import uuid
 load_dotenv()
 
 # Get the secret key from environment
-SECRET_KEY = os.getenv("BETTER_AUTH_SECRET")
+SECRET_KEY = os.getenv("JWT_SECRET") or os.getenv("BETTER_AUTH_SECRET")
+if not SECRET_KEY:
+    raise RuntimeError("Missing JWT secret: set JWT_SECRET (K8s) or BETTER_AUTH_SECRET (.env)")
 ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256")
 ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("JWT_EXPIRE_DAYS", 7)) * 24 * 60  # Convert days to minutes
 

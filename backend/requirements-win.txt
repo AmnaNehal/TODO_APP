@@ -11,6 +11,7 @@ python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
 python-multipart==0.0.12
 better-auth==0.0.1b11
+bcrypt==3.2.2
 
 # Env
 python-dotenv==1.0.0

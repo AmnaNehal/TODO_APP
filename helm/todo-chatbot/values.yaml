@@ -1,0 +1,33 @@
+backend:
+  name: todo-backend
+  image:
+    repository: todo-backend
+    tag: local
+    pullPolicy: IfNotPresent
+
+  replicas: 1
+
+  service:
+    type: ClusterIP
+    port: 8002
+
+  env:
+    secretName: todo-backend-env
+secrets:
+  backend:
+    name: todo-backend-env
+    DATABASE_URL: postgresql+psycopg://todo:todo123@todo-db:5432/todoapp
+    JWT_SECRET: super-secret-dev-key-123  
+
+frontend:
+  name: todo-frontend
+  image:
+    repository: todo-frontend
+    tag: local
+    pullPolicy: IfNotPresent
+
+  replicas: 1
+
+  service:
+    type: ClusterIP
+    port: 3000

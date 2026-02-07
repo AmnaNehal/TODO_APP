@@ -1,6 +1,6 @@
 import { getUserSession } from "./auth";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8002";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://todo-backend:8002";
 
 class ApiClient {
   private async makeRequest(
