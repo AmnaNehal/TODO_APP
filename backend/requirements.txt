@@ -5,6 +5,7 @@ uvicorn==0.31.1
 sqlmodel==0.0.32
 SQLAlchemy==2.0.46
 psycopg[binary]==3.3.2
+asyncpg==0.27.0  
 
 # Auth
 python-jose[cryptography]==3.3.0
