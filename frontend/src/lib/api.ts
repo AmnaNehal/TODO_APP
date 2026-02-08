@@ -1,6 +1,6 @@
 import { getUserSession } from "./auth";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8002";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://todo-app-1-cgpr.onrender.com";
 
 class ApiClient {
   private async makeRequest(

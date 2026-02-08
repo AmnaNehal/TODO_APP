@@ -17,7 +17,7 @@ type Props = {
 
 const API_BASE =
   process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") ||
-  "http://127.0.0.1:8002";
+  "https://todo-app-1-cgpr.onrender.com";
 
 // ✅ Helper: ALWAYS convert anything to string safely
 function toShortId(id: unknown) {
