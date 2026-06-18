@@ -8,7 +8,7 @@ A complete, locally runnable multi-user todo web application with secure authent
 - Secure authentication using Better Auth with JWT tokens
 - Full task CRUD operations (Create, Read, Update, Delete, Mark Complete)
 - Responsive UI with Tailwind CSS
-- Persistent storage in Neon Serverless PostgreSQL
+- Persistent storage in Neon PostgreSQL
 
 ## Tech Stack
 
